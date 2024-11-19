@@ -1,0 +1,878 @@
+{
+    "type": "struct",
+    "fields": [
+      {
+        "name": "_id",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "account",
+        "type": {
+          "type": "struct",
+          "fields": [
+            {
+              "name": "list",
+              "type": {
+                "type": "array",
+                "elementType": "string",
+                "containsNull": true
+              },
+              "nullable": true,
+              "metadata": {}
+            }
+          ]
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "address",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "agentInfo",
+        "type": {
+          "type": "struct",
+          "fields": [
+            {
+              "name": "location",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "locationGeoLatitude",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "lastCheckedIn",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "locationGeoLongtitude",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "agentVersion",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "manifestVersion",
+              "type": {
+                "type": "struct",
+                "fields": [
+                  {
+                    "name": "sca",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "vm",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "activatedModule",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "activationKey",
+              "type": {
+                "type": "struct",
+                "fields": [
+                  {
+                    "name": "title",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "activationId",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "agentConfiguration",
+              "type": {
+                "type": "struct",
+                "fields": [
+                  {
+                    "name": "id",
+                    "type": "integer",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "name",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "status",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "chirpStatus",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "connectedFrom",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "agentId",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "platform",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            }
+          ]
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "biosDescription",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "cloudProvider",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "created",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "dnsHostName",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "fqdn",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "id",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "isDockerHost",
+        "type": "boolean",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "lastComplianceScan",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "lastLoggedOnUser",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "lastSystemBoot",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "lastVulnScan",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "manufacturer",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "model",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "modified",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "name",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "networkGuid",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "networkInterface",
+        "type": {
+          "type": "array",
+          "elementType": "string",
+          "containsNull": true
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "openPort",
+        "type": {
+          "type": "array",
+          "elementType": "string",
+          "containsNull": true
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "processor",
+        "type": {
+          "type": "array",
+          "elementType": "string",
+          "containsNull": true
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "qwebHostId",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "software",
+        "type": {
+          "type": "array",
+          "elementType": "string",
+          "containsNull": true
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "sourceInfo",
+        "type": {
+          "type": "array",
+          "elementType": "string",
+          "containsNull": true
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "tags",
+        "type": {
+          "type": "array",
+          "elementType": "string",
+          "containsNull": true
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "timezone",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "totalMemory",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "trackingMethod",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "volume",
+        "type": {
+          "type": "array",
+          "elementType": "string",
+          "containsNull": true
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "vuln",
+        "type": {
+          "type": "array",
+          "elementType": "string",
+          "containsNull": true
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "deviceId",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "cid",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "agentLoadFlags",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "agentLocalTime",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "agentVersion",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "biosManufacturer",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "biosVersion",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "configIdBase",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "configIdBuild",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "configIdPlatform",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "cpuSignature",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "externalIp",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "macAddress",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "instanceId",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "serviceProvider",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "serviceProviderAccountId",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "hostname",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "firstSeen",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "lastSeen",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "localIp",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "majorVersion",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "minorVersion",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "osVersion",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "platformId",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "platformName",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "policies",
+        "type": {
+          "type": "array",
+          "elementType": "string",
+          "containsNull": true
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "reducedFunctionalityMode",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "devicePolicies",
+        "type": {
+          "type": "struct",
+          "fields": [
+            {
+              "name": "prevention",
+              "type": {
+                "type": "struct",
+                "fields": [
+                  {
+                    "name": "policyType",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "policyId",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "applied",
+                    "type": "boolean",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "settingsHash",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "assignedDate",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "appliedDate",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "ruleGroups",
+                    "type": {
+                      "type": "array",
+                      "elementType": "string",
+                      "containsNull": true
+                    },
+                    "nullable": true,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "sensorUpdate",
+              "type": {
+                "type": "struct",
+                "fields": [
+                  {
+                    "name": "policyType",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "policyId",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "applied",
+                    "type": "boolean",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "settingsHash",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "assignedDate",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "appliedDate",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "uninstallProtection",
+                    "type": "boolean",
+                    "nullable": true,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "globalConfig",
+              "type": {
+                "type": "struct",
+                "fields": [
+                  {
+                    "name": "policyType",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "policyId",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "applied",
+                    "type": "boolean",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "settingsHash",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "assignedDate",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "appliedDate",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "remoteResponse",
+              "type": {
+                "type": "struct",
+                "fields": [
+                  {
+                    "name": "policyType",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "policyId",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "applied",
+                    "type": "boolean",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "settingsHash",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "assignedDate",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  },
+                  {
+                    "name": "appliedDate",
+                    "type": "string",
+                    "nullable": true,
+                    "metadata": {}
+                  }
+                ]
+              },
+              "nullable": true,
+              "metadata": {}
+            }
+          ]
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "groups",
+        "type": {
+          "type": "array",
+          "elementType": "string",
+          "containsNull": true
+        },
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "groupHash",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "productTypeDesc",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "provisionStatus",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "serialNumber",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "status",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "systemManufacturer",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "systemProductName",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "zoneGroup",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "kernelVersion",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "chassisType",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "chassisTypeDesc",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "connectionIp",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "defaultGatewayIp",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "connectionMacAddress",
+        "type": "string",
+        "nullable": true,
+        "metadata": {}
+      },
+      {
+        "name": "meta",
+        "type": {
+          "type": "struct",
+          "fields": [
+            {
+              "name": "version",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            },
+            {
+              "name": "versionString",
+              "type": "string",
+              "nullable": true,
+              "metadata": {}
+            }
+          ]
+        },
+        "nullable": true,
+        "metadata": {}
+      }
+    ]
+  }
+  
