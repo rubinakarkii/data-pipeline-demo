@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 
 from fetch import fetch_data
 from transformation import transform_qualys_data, transform_crowdstrike_data
+from dedupe import remove_duplicates_from_transformed_data
 from load_data import load_data_to_mongodb
 
 load_dotenv()
@@ -29,11 +30,13 @@ async def etl_pipeline():
 
         if data_qualys:
             transformed_qualys = transform_qualys_data(data_qualys)
-            load_data_to_mongodb(transformed_qualys, DATABASE_NAME, QUALYS_COLLECTION)
+            final_qualys_data = remove_duplicates_from_transformed_data(transformed_qualys)
+            load_data_to_mongodb(final_qualys_data, DATABASE_NAME, QUALYS_COLLECTION)
         
         if data_crowdstrike:
             transformed_crowdstrike = transform_crowdstrike_data(data_crowdstrike)
-            load_data_to_mongodb(transformed_crowdstrike, DATABASE_NAME, CROWDSTRIKE_COLLECTION)
+            final_crowdstrike_data = remove_duplicates_from_transformed_data(transformed_crowdstrike)
+            load_data_to_mongodb(final_crowdstrike_data, DATABASE_NAME, CROWDSTRIKE_COLLECTION)
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
