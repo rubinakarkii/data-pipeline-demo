@@ -3,3 +3,4 @@
 Pipfile
 .DS_Store
 components/.DS_Store
+components/__pycache__
