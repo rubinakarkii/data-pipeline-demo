@@ -33,6 +33,3 @@ Execute the pipeline with the following command:
     python components/run_pipeline.py
 
 Ensure that the virtual environment is activated before running the command.
-
-
-<!-- (FOR VISUALIZATION USING METABASE) docker pull metabase/metabase, docker run -d -p 3000:3000 --name metabase metabase/metabase, http://localhost:3000/setup  -->
