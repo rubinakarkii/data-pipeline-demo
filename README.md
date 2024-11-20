@@ -9,6 +9,8 @@
 
 **NOTES: Since PySpark is used in the project, make sure Java (version 17.0.13) is installed on your system.**
 
+For macOS, *brew install openjdk@17*  
+
 ## Activate the Virtual Environment
 
 Navigate to the project directory and create a virtual environment:

@@ -31,6 +31,8 @@ def to_camel_case(snake_str):
     """Convert snake_case string to camelCase."""
     if snake_str == '_id':
         return snake_str 
+    elif snake_str == 'os_version':
+        return "os"
     components = snake_str.split('_')
     return components[0] + ''.join(x.title() for x in components[1:])
 
