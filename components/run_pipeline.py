@@ -19,8 +19,7 @@ HEADERS = {
     'accept': 'application/json'
 }
 DATABASE_NAME= os.getenv('database_name')
-QUALYS_COLLECTION= os.getenv('qualys_collection')
-CROWDSTRIKE_COLLECTION= os.getenv('crowdstrike_collection')
+COLLECTION= os.getenv('collection_name')
 
 
 async def etl_pipeline():
@@ -32,12 +31,12 @@ async def etl_pipeline():
         if data_qualys:
             transformed_qualys = transform_qualys_data(data_qualys)
             final_qualys_data = merge_duplicates_from_transformed_data(transformed_qualys)
-            load_data_to_mongodb(final_qualys_data, DATABASE_NAME, QUALYS_COLLECTION)
+            load_data_to_mongodb(final_qualys_data, DATABASE_NAME, COLLECTION)
         
         if data_crowdstrike:
             transformed_crowdstrike = transform_crowdstrike_data(data_crowdstrike)
             final_crowdstrike_data = merge_duplicates_from_transformed_data(transformed_crowdstrike)
-            load_data_to_mongodb(final_crowdstrike_data, DATABASE_NAME, CROWDSTRIKE_COLLECTION)
+            load_data_to_mongodb(final_crowdstrike_data, DATABASE_NAME, COLLECTION)
 
 
 if __name__ == "__main__":
