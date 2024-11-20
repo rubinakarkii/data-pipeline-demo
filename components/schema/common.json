@@ -26,7 +26,7 @@
         },
         "nullable": true,
         "metadata": {}
-      },
+      },     
       {
         "name": "address",
         "type": "string",
@@ -35,143 +35,7 @@
       },
       {
         "name": "agentInfo",
-        "type": {
-          "type": "struct",
-          "fields": [
-            {
-              "name": "location",
-              "type": "string",
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "locationGeoLatitude",
-              "type": "string",
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "lastCheckedIn",
-              "type": "string",
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "locationGeoLongtitude",
-              "type": "string",
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "agentVersion",
-              "type": "string",
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "manifestVersion",
-              "type": {
-                "type": "struct",
-                "fields": [
-                  {
-                    "name": "sca",
-                    "type": "string",
-                    "nullable": true,
-                    "metadata": {}
-                  },
-                  {
-                    "name": "vm",
-                    "type": "string",
-                    "nullable": true,
-                    "metadata": {}
-                  }
-                ]
-              },
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "activatedModule",
-              "type": "string",
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "activationKey",
-              "type": {
-                "type": "struct",
-                "fields": [
-                  {
-                    "name": "title",
-                    "type": "string",
-                    "nullable": true,
-                    "metadata": {}
-                  },
-                  {
-                    "name": "activationId",
-                    "type": "string",
-                    "nullable": true,
-                    "metadata": {}
-                  }
-                ]
-              },
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "agentConfiguration",
-              "type": {
-                "type": "struct",
-                "fields": [
-                  {
-                    "name": "id",
-                    "type": "integer",
-                    "nullable": true,
-                    "metadata": {}
-                  },
-                  {
-                    "name": "name",
-                    "type": "string",
-                    "nullable": true,
-                    "metadata": {}
-                  }
-                ]
-              },
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "status",
-              "type": "string",
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "chirpStatus",
-              "type": "string",
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "connectedFrom",
-              "type": "string",
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "agentId",
-              "type": "string",
-              "nullable": true,
-              "metadata": {}
-            },
-            {
-              "name": "platform",
-              "type": "string",
-              "nullable": true,
-              "metadata": {}
-            }
-          ]
-        },
+        "type": "string",
         "nullable": true,
         "metadata": {}
       },
@@ -207,7 +71,7 @@
       },
       {
         "name": "id",
-        "type": "string",
+        "type": "integer",
         "nullable": true,
         "metadata": {}
       },
@@ -274,9 +138,19 @@
       {
         "name": "networkInterface",
         "type": {
-          "type": "array",
-          "elementType": "string",
-          "containsNull": true
+          "type": "struct",
+          "fields": [
+            {
+              "name": "list",
+              "type": {
+                "type": "array",
+                "elementType": "string",
+                "containsNull": true
+              },
+              "nullable": true,
+              "metadata": {}
+            }
+          ]
         },
         "nullable": true,
         "metadata": {}
@@ -284,9 +158,19 @@
       {
         "name": "openPort",
         "type": {
-          "type": "array",
-          "elementType": "string",
-          "containsNull": true
+          "type": "struct",
+          "fields": [
+            {
+              "name": "list",
+              "type": {
+                "type": "array",
+                "elementType": "string",
+                "containsNull": true
+              },
+              "nullable": true,
+              "metadata": {}
+            }
+          ]
         },
         "nullable": true,
         "metadata": {}
@@ -294,35 +178,65 @@
       {
         "name": "processor",
         "type": {
-          "type": "array",
-          "elementType": "string",
-          "containsNull": true
+          "type": "struct",
+          "fields": [
+            {
+              "name": "list",
+              "type": {
+                "type": "array",
+                "elementType": "string",
+                "containsNull": true
+              },
+              "nullable": true,
+              "metadata": {}
+            }
+          ]
         },
         "nullable": true,
         "metadata": {}
       },
       {
         "name": "qwebHostId",
-        "type": "string",
+        "type": "integer",
         "nullable": true,
         "metadata": {}
       },
       {
         "name": "software",
         "type": {
-          "type": "array",
-          "elementType": "string",
-          "containsNull": true
+          "type": "struct",
+          "fields": [
+            {
+              "name": "list",
+              "type": {
+                "type": "array",
+                "elementType": "string",
+                "containsNull": true
+              },
+              "nullable": true,
+              "metadata": {}
+            }
+          ]
         },
         "nullable": true,
         "metadata": {}
       },
-      {
+     {
         "name": "sourceInfo",
         "type": {
-          "type": "array",
-          "elementType": "string",
-          "containsNull": true
+          "type": "struct",
+          "fields": [
+            {
+              "name": "list",
+              "type": {
+                "type": "array",
+                "elementType": "string",
+                "containsNull": true
+              },
+              "nullable": true,
+              "metadata": {}
+            }
+           ]
         },
         "nullable": true,
         "metadata": {}
@@ -330,9 +244,19 @@
       {
         "name": "tags",
         "type": {
-          "type": "array",
-          "elementType": "string",
-          "containsNull": true
+          "type": "struct",
+          "fields": [
+            {
+              "name": "list",
+              "type": {
+                "type": "array",
+                "elementType": "string",
+                "containsNull": true
+              },
+              "nullable": true,
+              "metadata": {}
+            }
+           ]
         },
         "nullable": true,
         "metadata": {}
@@ -364,9 +288,19 @@
       {
         "name": "volume",
         "type": {
-          "type": "array",
-          "elementType": "string",
-          "containsNull": true
+          "type": "struct",
+          "fields": [
+            {
+              "name": "list",
+              "type": {
+                "type": "array",
+                "elementType": "string",
+                "containsNull": true
+              },
+              "nullable": true,
+              "metadata": {}
+            }
+           ]
         },
         "nullable": true,
         "metadata": {}
@@ -374,9 +308,19 @@
       {
         "name": "vuln",
         "type": {
-          "type": "array",
-          "elementType": "string",
-          "containsNull": true
+          "type": "struct",
+          "fields": [
+            {
+              "name": "list",
+              "type": {
+                "type": "array",
+                "elementType": "string",
+                "containsNull": true
+              },
+              "nullable": true,
+              "metadata": {}
+            }
+           ]
         },
         "nullable": true,
         "metadata": {}
@@ -514,7 +458,7 @@
         "metadata": {}
       },
       {
-        "name": "osVersion",
+        "name": "os",
         "type": "string",
         "nullable": true,
         "metadata": {}
