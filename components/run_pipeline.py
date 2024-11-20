@@ -22,6 +22,7 @@ DATABASE_NAME= os.getenv('database_name')
 QUALYS_COLLECTION= os.getenv('qualys_collection')
 CROWDSTRIKE_COLLECTION= os.getenv('crowdstrike_collection')
 
+
 async def etl_pipeline():
     """Run the full ETL pipeline: fetch, transform, and load data."""
     async with aiohttp.ClientSession() as session:
@@ -37,6 +38,7 @@ async def etl_pipeline():
             transformed_crowdstrike = transform_crowdstrike_data(data_crowdstrike)
             final_crowdstrike_data = merge_duplicates_from_transformed_data(transformed_crowdstrike)
             load_data_to_mongodb(final_crowdstrike_data, DATABASE_NAME, CROWDSTRIKE_COLLECTION)
+
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)

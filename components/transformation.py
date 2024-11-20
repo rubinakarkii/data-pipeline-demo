@@ -26,12 +26,14 @@ def transform_qualys_data(api_data_qualys):
     logging.info(f"Completed the transformation of qualys data successfully")
     return transformed_df_qualys
 
+
 def to_camel_case(snake_str):
     """Convert snake_case string to camelCase."""
     if snake_str == '_id':
         return snake_str 
     components = snake_str.split('_')
     return components[0] + ''.join(x.title() for x in components[1:])
+
 
 def convert_keys_to_camel_case(d):
     """Recursively convert dictionary keys to camelCase."""
@@ -41,6 +43,7 @@ def convert_keys_to_camel_case(d):
         return {to_camel_case(k): convert_keys_to_camel_case(v) for k, v in d.items()}
     else:
         return d
+
 
 def transform_crowdstrike_data(api_data_crowdstrike):
     schema = load_common_schema()

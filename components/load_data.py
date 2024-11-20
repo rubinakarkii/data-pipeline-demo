@@ -3,6 +3,7 @@ from pymongo import MongoClient
 
 client = MongoClient("mongodb://localhost:27017/")
 
+
 def load_data_to_mongodb(df, db_name, collection_type):
     try:
         pandas_df = df.toPandas()

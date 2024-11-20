@@ -1,5 +1,6 @@
 import logging
 
+
 async def fetch_data(session, url, headers):
     """Fetch data from a given API URL asynchronously."""
     try:
