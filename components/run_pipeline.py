@@ -25,8 +25,10 @@ COLLECTION= os.getenv('collection_name')
 async def etl_pipeline():
     """Run the full ETL pipeline: fetch, transform, and load data."""
     async with aiohttp.ClientSession() as session:
-        data_qualys = await fetch_data(session, URL_QUALYS, HEADERS)
-        data_crowdstrike = await fetch_data(session, URL_CROWDSTRIKE, HEADERS)
+        data_qualys, data_crowdstrike = await asyncio.gather(
+            fetch_data(session, URL_QUALYS, HEADERS),
+            fetch_data(session, URL_CROWDSTRIKE, HEADERS)
+        )
 
         if data_qualys:
             transformed_qualys = transform_qualys_data(data_qualys)
